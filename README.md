@@ -20,5 +20,4 @@ git submodule --init --recursive
 
 copy file observerConfig.ini to observerConfig{username}.ini
 
-
 ./walletObserver.py observerConfig.ini
