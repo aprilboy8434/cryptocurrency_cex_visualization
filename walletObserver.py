@@ -13,7 +13,7 @@ from config_parser_helper import configParserHelper
 
 import logging
 
-isDevMode = True
+isDevMode = False
 
 ThaiBahtSymbol = 'THB'
 
@@ -132,5 +132,5 @@ if __name__ == '__main__':
         intervalSec = int( observerConfigDict['intervalminute'] ) * 60
 
     walletObserver = WalletObserver( bitKubConnection, databaseConnection, intervalSec )
-    
+
     walletObserver.run()

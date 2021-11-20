@@ -10,3 +10,15 @@ https://grafana.com/grafana/download
 sudo apt install postgresql
 sudo pip install psycopg2
 sudo pip install python-daemon
+
+
+#   how to start
+
+setup database with file ini_sql_table.sql
+
+git submodule --init --recursive
+
+copy file observerConfig.ini to observerConfig{username}.ini
+
+
+./walletObserver.py observerConfig.ini

@@ -1,7 +1,7 @@
-import os
 import psycopg2
 from config_parser_helper import configParserHelper
 
+#   TODO THIS IS QUICK IMPLEMENT IT IS NOT GOOD CODE PLEASE IMPROVE
 class PostgresqlConnection(object):
     
     
