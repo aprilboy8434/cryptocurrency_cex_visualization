@@ -6,5 +6,7 @@ This service will make a request to the Bitkub API from your wallet and save the
 - Install grafana
 https://grafana.com/grafana/download
 
-- Install 
+- Install package
 sudo apt install postgresql
+sudo pip install psycopg2
+sudo pip install python-daemon
