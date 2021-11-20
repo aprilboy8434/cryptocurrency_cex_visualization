@@ -7,8 +7,6 @@ from bitkub_connection.apiConnection import BitKubConnection
 from postgresql_connection import PostgresqlConnection
 from config_parser_helper import configParserHelper
 
-import logging
-
 isDevMode = False
 
 ThaiBahtSymbol = 'THB'
@@ -95,7 +93,7 @@ if __name__ == '__main__':
 
     #   if dev mode change to 5 sec
     if isDevMode:
-        intervalSec = 5
+        intervalSec = 10
 
     #   otherwise follow from config
     else:
@@ -104,5 +102,8 @@ if __name__ == '__main__':
     #   construct observer
     walletObserver = WalletObserver( bitKubConnection, databaseConnection, intervalSec )
 
-    with DaemonContext( pidfile=pidfile.TimeoutPIDLockFile( '/tmp/walletObserver.pid' ) ) as context:
+    if isDevMode:
         walletObserver.run()
+    else:
+        with DaemonContext( pidfile=pidfile.TimeoutPIDLockFile( '/tmp/walletObserver.pid' ) ) as context:
+            walletObserver.run()
