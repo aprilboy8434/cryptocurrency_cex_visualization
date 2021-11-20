@@ -1,0 +1,4 @@
+[submodule "bitkub_connection"]
+	path = bitkub_connection
+	url = git@github.com:aprilboy8434/bitkub_connection.git
+	branch = main
