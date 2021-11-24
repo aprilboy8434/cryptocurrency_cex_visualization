@@ -7,7 +7,7 @@ from bitkub_connection.apiConnection import BitKubConnection
 from postgresql_connection import PostgresqlConnection
 from config_parser_helper import configParserHelper
 
-isDevMode = False
+isDevMode = True
 
 ThaiBahtSymbol = 'THB'
 
